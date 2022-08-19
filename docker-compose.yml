@@ -1,0 +1,18 @@
+---
+services:
+  lildb:
+    image: lscr.io/linuxserver/mariadb:latest
+    container_name: lildb
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - MYSQL_ROOT_PASSWORD=clashersgg
+      - TZ=America/Denver
+      - MYSQL_DATABASE=clashers #optional
+      - MYSQL_USER=bigclasher #optional
+      - MYSQL_PASSWORD=clashersgg #optional
+    volumes:
+      - ./lildb:/config
+    ports:
+      - 3306:3306
+    restart: unless-stopped
