@@ -1,7 +1,3 @@
-#run mysql
-# TODO: will need to set up user, development db
-#change settings in API so it can connect to mysql
-
 ---
 services:
   lildb:
